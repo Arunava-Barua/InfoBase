@@ -1,8 +1,10 @@
 import csv
 from flask import Flask, jsonify, request
+from flask_cors import CORS
 # from flask_restful import Api, Resource, reqparse, abort, fields, marshal_with
 
 app = Flask(__name__)
+CORS(app)
 # api = Api(app)
 
 @app.route('/docs_info/<int:doc_id>', methods=['GET'])
