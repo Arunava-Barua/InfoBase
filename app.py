@@ -20,7 +20,7 @@ def get_sim_docs(doc_id):
                 sim2 = float(row['Sim2'])*100
                 sim3 = float(row['Sim3'])*100
                 sim4 = float(row['Sim4'])*100
-                return jsonify({ 'd': [row['D1'],  row['D2'], row['D3'], row['D4']], 'sim': [sim1, sim2, sim3, sim4] })
+                return jsonify({ 'docs': [row['D1'],  row['D2'], row['D3'], row['D4']], 'sim': [sim1, sim2, sim3, sim4] })
     
     # If not found, return a 404 error
     return jsonify({'error': 'doc not found'}), 404
